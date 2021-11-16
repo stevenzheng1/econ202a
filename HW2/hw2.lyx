@@ -1,0 +1,1658 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Problem Set 2
+\begin_inset Newline newline
+\end_inset
+
+Econ 202a Macroeconomics
+\begin_inset Newline newline
+\end_inset
+
+Jon Steinsson
+\end_layout
+
+\begin_layout Author
+Steven Zheng
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+steven_zheng@berkeley.edu
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Date
+November 2, 2021
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Question 1
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+Eat-the-Pie Problem: Consider a household that must live forever off an
+ initial stock of wealth 
+\begin_inset Formula $A_{0}$
+\end_inset
+
+ that pays a return 
+\begin_inset Formula $R$
+\end_inset
+
+.
+ The household seeks to maximize the utility function
+\begin_inset Formula 
+\[
+\sum_{t=0}^{\infty}\beta^{t}u(C_{t}).
+\]
+
+\end_inset
+
+The household's wealth evolves according to
+\begin_inset Formula 
+\[
+A_{t+1}=R(A_{t}-C_{t}).
+\]
+
+\end_inset
+
+The Bellman equation for the household's problem is
+\begin_inset Formula 
+\[
+V(A)=\max_{C\in[0,A]}\left\{ u(C)+\beta V(R(A-C))\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Question 1a
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+Using Blackwell's sufficiency conditions, prove that the Bellman operator
+ 
+\begin_inset Formula $T$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+(TV)(A)=\max_{C\in[0,A]}\left\{ u(C)+\beta V(R(A-C))\right\} 
+\]
+
+\end_inset
+
+is contraction mapping.
+ For simplicity, you can assume that 
+\begin_inset Formula $u(C)$
+\end_inset
+
+ is bounded for 
+\begin_inset Formula $C\in[0,A]$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+1.
+ Bounded 
+\begin_inset Formula $T$
+\end_inset
+
+: Let 
+\begin_inset Formula $B(A)$
+\end_inset
+
+ be the set of bounded functions, and 
+\begin_inset Formula $T:B(A)\to B(A)$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $u(C)$
+\end_inset
+
+ is assumed to be bounded, 
+\begin_inset Formula $V$
+\end_inset
+
+ bounded, so 
+\begin_inset Formula $TV$
+\end_inset
+
+ is bounded.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+2.
+ Monotonicity: Suppose we have 
+\begin_inset Formula $V,W\in B(A)$
+\end_inset
+
+ with 
+\begin_inset Formula $W(A)\le V(A)$
+\end_inset
+
+ for all 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ WTS: 
+\begin_inset Formula $TW\le TV$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Following the section notes, let 
+\begin_inset Formula $G_{W}(A)$
+\end_inset
+
+ denote the optimal policy corresponding to 
+\begin_inset Formula $W$
+\end_inset
+
+ for all 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ Then
+\begin_inset Formula 
+\begin{align*}
+T(W(A)) & =\max_{C\in[0,A]}\left\{ u(C)+\beta W(R(A-C))\right\} \\
+ & =u(C)+\beta W\left[R(A-G_{W}(A))\right]\\
+ & \le u(C)+\beta V\left[R(A-G_{W}(A))\right]\\
+ & \le\max_{C\in[0,A]}\left\{ u(C)+\beta V(R(A-C))\right\} \\
+ & =T(V(A))
+\end{align*}
+
+\end_inset
+
+so 
+\begin_inset Formula $T(W(A))\le T(V(A))$
+\end_inset
+
+ and monotonicity holds.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+3.
+ Discounting: WTS: there exists 
+\begin_inset Formula $\beta\in(0,1)$
+\end_inset
+
+ such that 
+\begin_inset Formula $[T(V+c)](A)\le(TV)(A)+\beta c(A)$
+\end_inset
+
+ for 
+\begin_inset Formula $c(A)=c\ge0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Following the section notes, we have
+\begin_inset Formula 
+\begin{align*}
+[T(V+c)](A) & =\max_{C\in[0,A]}\left\{ u(C)+\beta V(R(A-C))\right\} \\
+ & =\max_{C\in[0,A]}\left\{ u(C)+\beta V(R(A-C)+c)\right\} \\
+ & =\max_{C\in[0,A]}\left\{ u(C)+\beta V(R(A-C))\right\} +\beta c\\
+ & =[TV](A)+\beta c
+\end{align*}
+
+\end_inset
+
+so discounting holds.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Thus, 
+\begin_inset Formula $T$
+\end_inset
+
+ is a contraction mapping.
+\end_layout
+
+\begin_layout Subsection
+Question 1b
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+Assume that
+\begin_inset Formula 
+\[
+u(C)=\begin{cases}
+\frac{C^{1-\gamma}}{1-\gamma} & \text{, if }\text{\ensuremath{\gamma\in(0,\infty)} and }\gamma\neq1\\
+\log C & \text{, if }\gamma=1.
+\end{cases}
+\]
+
+\end_inset
+
+Let's guess that the value function takes the form
+\begin_inset Formula 
+\[
+V(A)=\begin{cases}
+\psi\frac{A^{1-\gamma}}{1-\gamma} & \text{, if }\gamma\in(0,\infty)\text{ and }\gamma\neq1\\
+\phi+\psi\log A & \text{, if }\gamma=1.
+\end{cases}
+\]
+
+\end_inset
+
+Confirm that this is in fact a solution to the Bellman equation.
+\end_layout
+
+\end_inset
+
+
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Case 1: 
+\begin_inset Formula $\gamma=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Guess 
+\begin_inset Formula $V(A)=\phi+\psi\log A$
+\end_inset
+
+.
+ Then the Bellman equation becomes
+\begin_inset Formula 
+\begin{align*}
+V(A) & =\max_{C\in[0,A]}\left\{ u(C)+\beta V(R(A-C))\right\} \\
+ & =\max_{C\in[0,A]}\left\{ \log C+\beta\left[\phi+\psi\log(R(A-C))\right]\right\} \\
+ & =\max_{C\in[0,A]}\left\{ \log C+\beta\phi+\beta\psi\log(R(A-C))\right\} .
+\end{align*}
+
+\end_inset
+
+The FOCs are
+\begin_inset Formula 
+\begin{align*}
+0 & =\frac{\partial V(A)}{\partial C}\\
+ & =\frac{1}{C}-\beta\psi\frac{1}{R(A-C)}R\\
+\iff\frac{1}{C} & =\beta\psi\frac{1}{(A-C)}\\
+\iff A-C & =\beta\psi C\\
+\iff A & =C(\beta\psi+1)\\
+\iff C & =\frac{A}{\beta\psi+1}.
+\end{align*}
+
+\end_inset
+
+Then substituting into the Bellman equation
+\begin_inset Formula 
+\begin{align*}
+V(A) & =\max_{C\in[0,A]}\left\{ \log\frac{A}{\beta\psi+1}+\beta\phi+\beta\psi\log\left[R\left(A-\frac{A}{\beta\psi+1}\right)\right]\right\} \\
+ & =\log\frac{A}{\beta\psi+1}+\beta\phi+\beta\psi\log\left[R\left(A-\frac{A}{\beta\psi+1}\right)\right]\\
+ & =\log\frac{A}{\beta\psi+1}+\beta\phi+\beta\psi\log\left[\frac{RA\beta\psi}{\beta\psi+1}\right]\\
+ & =\log A-\log(\beta\psi+1)+\beta\phi+\beta\psi\log RA\beta\psi-\beta\psi\log\left(\beta\psi+1\right)\\
+ & =\log A-(1+\beta\psi)\log(\beta\psi+1)+\beta\phi+\beta\psi\log R\beta\psi+\beta\psi\log A\\
+ & =(1+\beta\psi)\log A-(1+\beta\psi)\log(\beta\psi+1)+\beta\phi+\beta\psi\log R\beta\psi
+\end{align*}
+
+\end_inset
+
+which if we use the method of undetermined coefficients, we get
+\begin_inset Formula 
+\begin{align*}
+\phi & =-(1+\beta\psi)\log(\beta\psi+1)+\beta\phi+\beta\psi\log R\beta\psi\\
+\psi & =1+\beta\psi
+\end{align*}
+
+\end_inset
+
+which we can rewrite as
+\begin_inset Formula 
+\begin{align*}
+\psi(1-\beta) & =1\\
+\iff\psi & =\frac{1}{1-\beta}
+\end{align*}
+
+\end_inset
+
+and 
+\begin_inset Formula 
+\begin{align*}
+\phi & (1-\beta)=-\left(1+\beta\frac{1}{1-\beta}\right)\log\left(\beta\frac{1}{1-\beta}+1\right)+\beta\frac{1}{1-\beta}\log\left(R\beta\frac{1}{1-\beta}\right)\\
+\iff\phi & =\frac{1}{1-\beta}\left[\frac{\beta}{1-\beta}\log\beta R+\log(1-\beta)\right]
+\end{align*}
+
+\end_inset
+
+so then plugging back into the Bellman equation
+\begin_inset Formula 
+\begin{align*}
+V(A) & =\frac{1}{1-\beta}\left[\frac{\beta}{1-\beta}\log\beta R+\log(1-\beta)\right]+\frac{1}{1-\beta}\log A.
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Case 2: 
+\begin_inset Formula $\gamma\neq1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Guess 
+\begin_inset Formula $V(A)=\psi\frac{A^{1-\gamma}}{1-\gamma}$
+\end_inset
+
+.
+ Then the Bellman equation becomes
+\begin_inset Formula 
+\begin{align*}
+V(A) & =\max_{C\in[0,A]}\left\{ u(C)+\beta V(R(A-C))\right\} \\
+ & =\max_{C\in[0,A]}\left\{ \frac{C^{1-\gamma}}{1-\gamma}+\beta\psi\frac{(R(A-C))^{1-\gamma}}{1-\gamma}\right\} .
+\end{align*}
+
+\end_inset
+
+The FOCs are
+\begin_inset Formula 
+\begin{align*}
+0 & =\frac{\partial V(A)}{\partial C}\\
+ & =C^{-\gamma}-\beta\psi R(R(A-C))^{-\gamma}\\
+\iff C & =(\beta R\psi)^{-\frac{1}{\gamma}}R(A-C)\\
+(1+(\beta R\psi)^{-\frac{1}{\gamma}}R)C & =(\beta R\psi)^{-\frac{1}{\gamma}}RA\\
+C & =\frac{c}{1+c}A
+\end{align*}
+
+\end_inset
+
+where 
+\begin_inset Formula $c\equiv(\beta R^{1-\gamma}\psi)^{-\frac{1}{\gamma}}$
+\end_inset
+
+.
+ Then substituting into the Bellman equation
+\begin_inset Formula 
+\begin{align*}
+V(A) & =\frac{c^{1-\gamma}}{(1+c)^{1-\gamma}}\frac{A^{1-\gamma}}{1-\gamma}+\beta\psi\frac{R^{1-\gamma}}{(1+c)^{1-\gamma}}\frac{A^{1-\gamma}}{1-\gamma}\\
+ & =\left(\frac{c^{1-\gamma}+c^{-\gamma}}{(1+c)^{1-\gamma}}\right)\frac{A^{1-\gamma}}{1-\gamma}\\
+ & =\left(\frac{c^{-\gamma}}{(1+c)^{-\gamma}}\right)\frac{A^{1-\gamma}}{1-\gamma}\\
+ & =\left(\frac{c}{1+c}\right)^{-\gamma}\frac{A^{1-\gamma}}{1-\gamma}
+\end{align*}
+
+\end_inset
+
+which if we use the method of undetermined coefficients, we get
+\begin_inset Formula 
+\begin{align*}
+\psi & =\left(\frac{c}{1+c}\right)^{-\gamma}\\
+ & =\frac{c^{-\gamma}}{(1+c)^{-\gamma}}\\
+ & =\frac{\left((\beta R^{1-\gamma}\psi)^{-\frac{1}{\gamma}}\right)^{-\gamma}}{\left(1+\left((\beta R^{1-\gamma}\psi)^{-\frac{1}{\gamma}}\right)\right)^{-\gamma}}\\
+ & =\frac{\beta R^{1-\gamma}\psi}{\left(1+\left((\beta R^{1-\gamma}\psi)^{-\frac{1}{\gamma}}\right)\right)^{-\gamma}}\\
+\iff1 & =\frac{\beta R^{1-\gamma}}{\left(1+\left((\beta R^{1-\gamma}\psi)^{-\frac{1}{\gamma}}\right)\right)^{-\gamma}}\\
+\iff\left(1+\left((\beta R^{1-\gamma}\psi)^{-\frac{1}{\gamma}}\right)\right)^{-\gamma} & =\beta R^{1-\gamma}\\
+\iff1+\left((\beta R^{1-\gamma}\psi)^{-\frac{1}{\gamma}}\right) & =\left(\beta R^{1-\gamma}\right)^{-\frac{1}{\gamma}}\\
+\iff(\beta R^{1-\gamma}\psi)^{-\frac{1}{\gamma}} & =\left(\beta R^{1-\gamma}\right)^{-\frac{1}{\gamma}}-1\\
+\iff\psi^{-\frac{1}{\gamma}} & =1-\left(\beta R^{1-\gamma}\right)^{-\frac{1}{\gamma}}
+\end{align*}
+
+\end_inset
+
+Then substituting into the Bellman equation
+\begin_inset Formula 
+\[
+V(A)=(1-(\beta R^{1-\gamma})^{\frac{1}{\gamma}})^{-\gamma}\frac{A^{1-\gamma}}{1-\gamma}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Question 1c
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+Derive the optimal policy rule
+\begin_inset Formula 
+\[
+C=\psi^{-\gamma^{-1}}A
+\]
+
+\end_inset
+
+where
+\begin_inset Formula 
+\[
+\psi^{-\gamma^{-1}}=1-(\beta R^{1-\gamma})^{\gamma^{-1}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+From part 1b in the case of 
+\begin_inset Formula $\gamma\neq1$
+\end_inset
+
+, we have
+\begin_inset Formula 
+\[
+C=\frac{c}{1+c}A
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $c\equiv(\beta R^{1-\gamma}\psi)^{-\frac{1}{\gamma}}$
+\end_inset
+
+.
+ So
+\begin_inset Formula 
+\begin{align*}
+C & =\frac{(\beta R^{1-\gamma}\psi)^{-\frac{1}{\gamma}}}{1+(\beta R^{1-\gamma}\psi)^{-\frac{1}{\gamma}}}A\\
+ & =\frac{\left(\beta R^{1-\gamma}\right)^{-\frac{1}{\gamma}}\left(1-\left(\beta R^{1-\gamma}\right)^{\frac{1}{\gamma}}\right)}{\left(\beta R^{1-\gamma}\right)^{-\frac{1}{\gamma}}}A\\
+ & =\psi^{-\gamma^{-1}}A
+\end{align*}
+
+\end_inset
+
+is the optimal policy rule.
+\end_layout
+
+\begin_layout Subsection
+Question 1d
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+When 
+\begin_inset Formula $\gamma=1$
+\end_inset
+
+, the consumption rule becomes 
+\begin_inset Formula $C=(1-\beta)A$
+\end_inset
+
+.
+ Why does consumption not depend on the value of the interest rate in this
+ case? (Hint: think about income and substitution effects.)
+\end_layout
+
+\end_inset
+
+
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+With log utility, the income and substitution effects cancel out and consumption
+ is not a function of interest rates.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Question 2
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+Consider a household that lives for 
+\begin_inset Formula $T+1$
+\end_inset
+
+ periods from period 
+\begin_inset Formula $0$
+\end_inset
+
+ to period 
+\begin_inset Formula $T$
+\end_inset
+
+ and faces a consumption-savings decision.
+ The household seeks to maximize
+\begin_inset Formula 
+\[
+\sum_{t=0}^{T}\beta^{t}u(C_{t})
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $u^{\prime}(C_{t})>0$
+\end_inset
+
+ and 
+\begin_inset Formula $u^{\prime\prime}(C_{t})<0$
+\end_inset
+
+.
+ The household starts off with wealth 
+\begin_inset Formula $A_{0}$
+\end_inset
+
+ and receives a constant income stream of 
+\begin_inset Formula $Y$
+\end_inset
+
+ per period.
+ The interest rate in the economy is 
+\begin_inset Formula $R$
+\end_inset
+
+.
+ The household's budget constraint is therefore
+\begin_inset Formula 
+\[
+C_{t}+A_{t+1}=Y+(1+R)A_{t}.
+\]
+
+\end_inset
+
+The household is constrained to die without debt: 
+\begin_inset Formula $A_{T+1}\ge0$
+\end_inset
+
+.
+ Since the problem is non-stationary (time to death varies with 
+\begin_inset Formula $t$
+\end_inset
+
+), the value function will be different for different periods.
+ The value function will therefore have a time subscript, i.e., 
+\begin_inset Formula $V_{t}(A)$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Question 2a
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+What is the value function for the household in period 
+\begin_inset Formula $T$
+\end_inset
+
+?
+\end_layout
+
+\end_inset
+
+
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We have
+\begin_inset Formula 
+\[
+V_{T}(A_{T})=u(C_{T})
+\]
+
+\end_inset
+
+since the household dies after 
+\begin_inset Formula $T$
+\end_inset
+
+.
+ We have the constraint that the household dies without debt.
+ But 
+\begin_inset Formula $u^{\prime}(C_{t})>0$
+\end_inset
+
+ so it will not leave any wealth and consume everything, so
+\begin_inset Formula 
+\[
+A_{T+1}=0.
+\]
+
+\end_inset
+
+So then the budget constraint is 
+\begin_inset Formula 
+\[
+C_{T}=Y+(1+R)A_{T}
+\]
+
+\end_inset
+
+which plugging back in gives
+\begin_inset Formula 
+\[
+V_{T}(A_{T})=u(Y+(1+R)A_{T}).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Question 2b
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+Write a Bellman equation for the household for 
+\begin_inset Formula $t<T$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We have the budget constraint
+\begin_inset Formula 
+\begin{align*}
+C_{t}+A_{t+1} & =Y+(1+R)A_{t}\\
+\iff A_{t+1} & =Y+(1+R)A_{t}-C_{t}
+\end{align*}
+
+\end_inset
+
+so then the Bellman equation is
+\begin_inset Formula 
+\begin{align*}
+V_{t}(A_{t}) & =\max_{C_{t}}\left\{ u(C_{t})+\beta V_{t+1}(A_{t+1})\right\} \\
+ & =\max_{C_{t}}\left\{ u(C_{t})+\beta V_{t+1}(Y+(1+R)A_{t}-C_{t})\right\} 
+\end{align*}
+
+\end_inset
+
+where the set of feasible 
+\begin_inset Formula $C_{t}$
+\end_inset
+
+ is from consuming nothing, 0, to consuming everything, 
+\begin_inset Formula $Y+(1+R)A_{t}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Question 2c
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+For the remainder to this problem, we make the simplifying assumption that
+ 
+\begin_inset Formula $\beta(1+R)=1$
+\end_inset
+
+.
+ We want to show that the value function takes the following form
+\begin_inset Formula 
+\[
+V_{t}(A_{t})=\frac{1-\beta^{T-t+1}}{1-\beta}u\left(Y+\frac{1-\beta}{1-\beta^{T-t+1}}(1+R)A_{T}\right)
+\]
+
+\end_inset
+
+and the optimal policy rule for the household is
+\begin_inset Formula 
+\[
+C_{t}(A_{t})=Y+\frac{1-\beta}{1-\beta^{T-t+1}}(1+R)A_{t}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Show that the value function and policy rule above are correct for 
+\begin_inset Formula $t=T$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Evaluating 
+\begin_inset Formula $V_{t}(A_{t})$
+\end_inset
+
+ at 
+\begin_inset Formula $t=T$
+\end_inset
+
+ gives
+\begin_inset Formula 
+\[
+V_{T}(A_{T})=u\left(Y+(1+R)A_{T}\right)
+\]
+
+\end_inset
+
+and evaluating 
+\begin_inset Formula $C_{t}(A_{t})$
+\end_inset
+
+ at 
+\begin_inset Formula $t=T$
+\end_inset
+
+ gives
+\begin_inset Formula 
+\[
+C_{T}(A_{T})=Y+(1+R)A_{T}
+\]
+
+\end_inset
+
+and matches what we have for part 2a.
+\end_layout
+
+\begin_layout Subsection
+Question 2d
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+Use an inductive argument to show that the value function and policy rule
+ above are correct for 
+\begin_inset Formula $t<T$
+\end_inset
+
+.
+ I.e., assume they are correct for 
+\begin_inset Formula $t+1$
+\end_inset
+
+ and show that conditional on this they are correct for 
+\begin_inset Formula $t$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Suppose the value function and policy rule are correct for 
+\begin_inset Formula $t+1$
+\end_inset
+
+.
+ From above, they are true for 
+\begin_inset Formula $T$
+\end_inset
+
+.
+ WTS: they are correct for 
+\begin_inset Formula $t<T$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The FOCs for 
+\begin_inset Formula $t<T$
+\end_inset
+
+ is
+\begin_inset Formula 
+\begin{align*}
+0 & =u^{\prime}(C_{t})-\beta V_{t+1}^{\prime}(A_{t+1})\\
+\iff u^{\prime}(C_{t}) & =\beta\frac{1-\beta^{T-t}}{1-\beta}u^{\prime}\left(Y+\frac{1-\beta}{1-\beta^{T-t}}(1+R)A_{t+1}\right)\frac{1-\beta}{1-\beta^{T-t}}(1+R)\\
+ & =\beta(1+R)u^{\prime}\left(Y+\frac{1-\beta}{1-\beta^{T-t}}(1+R)A_{t+1}\right)\\
+ & =u^{\prime}\left(Y+\frac{1-\beta}{1-\beta^{T-t}}(1+R)A_{t+1}\right)\\
+\iff C_{t} & =Y+\frac{1-\beta}{1-\beta^{T-t}}(1+R)A_{t+1}\\
+ & =Y+\frac{1-\beta}{1-\beta^{T-t}}(1+R)\left[Y+(1+R)A_{t}-C_{t}\right]\\
+ & =Y+\frac{1-\beta}{1-\beta^{T-t}}(1+R)\left[Y+(1+R)A_{t}\right]-\frac{1-\beta}{1-\beta^{T-t}}(1+R)C_{t}\\
+\iff C_{t}\left[1+\frac{1-\beta}{1-\beta^{T-t}}(1+R)\right] & =Y+\frac{1-\beta}{1-\beta^{T-t}}(1+R)\left[Y+(1+R)A_{t}\right]\\
+ & =Y\left[1+\frac{1-\beta}{1-\beta^{T-t}}(1+R)\right]+\frac{1-\beta}{1-\beta^{T-t}}(1+R)(1+R)A_{t}\\
+\iff C_{t} & =Y+\frac{\frac{1-\beta}{1-\beta^{T-t}}(1+R)}{1+\frac{1-\beta}{1-\beta^{T-t}}(1+R)}(1+R)A_{t}\\
+ & =Y+\frac{\frac{1-\beta}{1-\beta^{T-t}}}{\frac{1}{(1+R)}+\frac{1-\beta}{1-\beta^{T-t}}}(1+R)A_{t}\\
+ & =Y+\frac{\frac{1-\beta}{1-\beta^{T-t}}}{\beta+\frac{1-\beta}{1-\beta^{T-t}}}(1+R)A_{t}\\
+ & =Y+\frac{1-\beta}{1-\beta^{T-t+1}}(1+R)A_{t}
+\end{align*}
+
+\end_inset
+
+so the above are correct.
+\end_layout
+
+\begin_layout Standard
+Then plugging into the budget constraint
+\begin_inset Formula 
+\begin{align*}
+A_{t+1} & =Y+(1+R)A_{t}-\left[Y+\frac{1-\beta}{1-\beta^{T-t+1}}(1+R)A_{t}\right]\\
+ & =(1+R)\frac{\beta(1-\beta^{T-t})}{1-\beta^{T-t+1}}A_{t}\\
+ & =\frac{1-\beta^{T-t}}{1-\beta^{T-t+1}}A_{t}
+\end{align*}
+
+\end_inset
+
+so then we have
+\begin_inset Formula 
+\begin{align*}
+V_{t}(A_{t}) & =u\left(Y+\frac{1-\beta}{1-\beta^{T-t+1}}(1+R)A_{t}\right)+\beta\frac{1-\beta^{T-t}}{1-\beta}u\left(Y+\frac{1-\beta}{1-\beta^{T-t}}(1+R)A_{t+1}\right)\\
+ & =u\left(Y+\frac{1-\beta}{1-\beta^{T-t+1}}(1+R)A_{t}\right)+\beta\frac{1-\beta^{T-t}}{1-\beta}u\left(Y+\frac{1-\beta}{1-\beta^{T-t}}(1+R)\frac{1-\beta^{T-t}}{1-\beta^{T-t+1}}A_{t}\right)\\
+ & =\left(1+\beta\frac{1-\beta^{T-t}}{1-\beta}\right)u\left(Y+\frac{1-\beta}{1-\beta^{T-t+1}}(1+R)A_{t}\right)\\
+ & =\frac{1-\beta^{T-t+1}}{1-\beta}u\left(Y+\frac{1-\beta}{1-\beta^{T-t+1}}(1+R)A_{T}\right)
+\end{align*}
+
+\end_inset
+
+which is what we needed to show.
+\end_layout
+
+\begin_layout Subsection
+Question 2e
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+What happens as 
+\begin_inset Formula $T\to\infty$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+As 
+\begin_inset Formula $T\to\infty$
+\end_inset
+
+, we have
+\begin_inset Formula 
+\[
+V(A)=\frac{1}{1-\beta}u\left(Y+(1-\beta)(1+R)A\right)
+\]
+
+\end_inset
+
+and
+\begin_inset Formula 
+\[
+C(A)=Y+(1-\beta)(1+R)A.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Question 3
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+Optimal Stopping Problem: Each period a worker draws a job offer from a
+ uniform distribution with support in the unit interval: 
+\begin_inset Formula $x\sim U(0,1)$
+\end_inset
+
+.
+ The worker can either accept the offer and realize a net present value
+ of 
+\begin_inset Formula $x$
+\end_inset
+
+ or wait for another period and draw again.
+ The problem ends when the worker accepts an offer.
+ The worker discounts the future at a rate 
+\begin_inset Formula $\beta$
+\end_inset
+
+ per period.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Question 3a
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+Write down a Bellman equation for this problem.
+\end_layout
+
+\end_inset
+
+
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+From Laibson's lecture notes, the Bellman equation is
+\begin_inset Formula 
+\[
+V(x)=\max\{x,\beta\mathbb{E}[v(x^{\prime})].
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Question 3b
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+Using Blackwell's conditions, show that the Bellman operator is a contraction
+ mapping.
+\end_layout
+
+\end_inset
+
+
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+1.
+ Bounded 
+\begin_inset Formula $T$
+\end_inset
+
+: 
+\begin_inset Formula $x$
+\end_inset
+
+ is bounded by 1, so 
+\begin_inset Formula $V$
+\end_inset
+
+ is bounded and so is 
+\begin_inset Formula $T$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+2.
+ Monotonicity: Suppose we have 
+\begin_inset Formula $W(x)\le V(x)$
+\end_inset
+
+ for all 
+\begin_inset Formula $x\in[0,1]$
+\end_inset
+
+.
+ Then
+\begin_inset Formula 
+\begin{align*}
+[TW](x) & =\max\{x,\beta\mathbb{E}[W(x^{\prime})]\\
+ & \le\max\{x,\beta\mathbb{E}[V(x^{\prime})]\\
+ & =[TV](x),
+\end{align*}
+
+\end_inset
+
+so monotonicity holds.
+\end_layout
+
+\begin_layout Standard
+3.
+ Discounting: For 
+\begin_inset Formula $c\ge0$
+\end_inset
+
+,
+\begin_inset Formula 
+\begin{align*}
+[T(V+c)](x) & =\max\{x,\beta\mathbb{E}[(V+c)(x^{\prime})]\}\\
+ & =\max\{x,\beta\mathbb{E}[V(x^{\prime})]+\beta c\}\\
+ & \le\max\{x+\beta c,\beta\mathbb{E}[V(x^{\prime})]+\beta c\}\\
+ & =[TV](c)+\beta c
+\end{align*}
+
+\end_inset
+
+so discounting holds.
+\end_layout
+
+\begin_layout Standard
+Thus, the Bellman operator is a contraction mapping.
+\end_layout
+
+\begin_layout Subsection
+Question 3c
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+Starting with a guess 
+\begin_inset Formula $V_{0}(x)=1$
+\end_inset
+
+, analytically iterate on the Bellman operator to show that
+\begin_inset Formula 
+\[
+V(x)=\begin{cases}
+x^{\star} & \text{, if }x\le x^{\star}\\
+x & \text{, if }x>x^{\star}
+\end{cases}
+\]
+
+\end_inset
+
+where
+\begin_inset Formula 
+\[
+x^{\star}=\beta^{-1}\left(1-\sqrt{1-\beta^{2}}\right).
+\]
+
+\end_inset
+
+Hint: each iteration will give rise to a cutoff value for 
+\begin_inset Formula $x$
+\end_inset
+
+.
+ Let's denote the cutoff in iteration 
+\begin_inset Formula $n$
+\end_inset
+
+ as 
+\begin_inset Formula $x_{n}^{\star}$
+\end_inset
+
+.
+ Derive a condition that relates the cutoff value 
+\begin_inset Formula $x_{n}^{\star}$
+\end_inset
+
+ to the cutoff value in the previous iteration 
+\begin_inset Formula $x_{n-1}^{\star}$
+\end_inset
+
+.
+ Solve for a fixed point of this dynamic equation.
+\end_layout
+
+\end_inset
+
+
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+I think there's a cleaner way to do this than iterating.
+ At 
+\begin_inset Formula $x=x^{\star}$
+\end_inset
+
+, the worker is indifferent between accepting vs.
+ waiting to draw again, so
+\begin_inset Formula 
+\begin{align*}
+V(x^{\star}) & =x^{\star}\\
+ & =\beta\mathbb{E}[V(x^{\prime})]\\
+ & =\beta\int_{x=0}^{x=x^{\star}}x^{\star}f(x)dx+\beta\int_{x=x^{\star}}^{x=1}xf(x)dx\\
+ & =\beta\frac{1}{2}(x^{\star})^{2}+\beta\frac{1}{2},
+\end{align*}
+
+\end_inset
+
+so
+\begin_inset Formula 
+\begin{align*}
+x^{\star} & =\frac{\beta}{2}(x^{\star})^{2}+\frac{\beta}{2}\\
+\iff\frac{\beta}{2}(x^{\star})^{2}-x^{\star}+\frac{\beta}{2} & =0
+\end{align*}
+
+\end_inset
+
+and the solution is (using quadratic formula and ruling out the plus case
+ since 
+\begin_inset Formula $x^{\star}$
+\end_inset
+
+is bounded above by 1)
+\begin_inset Formula 
+\[
+x^{\star}=\frac{1-\sqrt{1-\beta^{2}}}{\beta}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
