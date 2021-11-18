@@ -1,0 +1,210 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section*
+Part a
+\end_layout
+
+\begin_layout Standard
+We have the recursive problem
+\begin_inset Formula 
+\[
+V(A,Y)=\max\left\{ \frac{C^{1-\gamma}}{1-\gamma}+\beta\mathbb{E}[V(A^{\prime},Y^{\prime})]\right\} 
+\]
+
+\end_inset
+
+subject to the budget constraint
+\begin_inset Formula 
+\[
+A_{t+1}=Z(Y_{t}-C_{t}+A_{t})^{\alpha}
+\]
+
+\end_inset
+
+with labor income
+\begin_inset Formula 
+\[
+\log Y_{t}=(1-\rho)\log\mu+\rho\log Y_{t-1}+\epsilon_{t}.
+\]
+
+\end_inset
+
+We can rearrange the budget constraint as
+\begin_inset Formula 
+\begin{align*}
+A_{t+1}^{1/\alpha} & =Z^{1/\alpha}(Y_{t}-C_{t}+A_{t})\\
+\iff\left(\frac{A_{t+1}}{Z}\right)^{1/\alpha} & =Y_{t}-C_{t}+A_{t}\\
+\iff C_{t} & =Y_{t}+A_{t}-\left(\frac{A_{t+1}}{Z}\right)^{1/\alpha}
+\end{align*}
+
+\end_inset
+
+so we can rewrite the recursive problem as
+\begin_inset Formula 
+\[
+V(A,Y)=\max_{A^{\prime}\in\Gamma(A,Y)}\left\{ \frac{\left(Y+A-\left(\frac{A^{\prime}}{Z}\right)^{1/\alpha}\right)^{1-\gamma}}{1-\gamma}+\beta\mathbb{E}\left[V(A^{\prime},Y^{\prime})\right]\right\} .
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Part d
+\end_layout
+
+\begin_layout Standard
+Let's calculate the steady-state of 
+\begin_inset Formula $A$
+\end_inset
+
+ using the FOCs of the sequence problem and the budget constraint.
+\end_layout
+
+\begin_layout Standard
+The sequence problem is
+\begin_inset Formula 
+\[
+\max_{\{C_{t}\}_{t=0}^{\infty}}\mathbb{E}_{0}\sum_{t=0}^{\infty}\beta^{t}\frac{C_{t}^{1-\gamma}}{1-\gamma}
+\]
+
+\end_inset
+
+such that
+\begin_inset Formula 
+\begin{align*}
+A_{t+1} & =Z(Y_{t}-C_{t}+A_{t})^{\alpha}\\
+\iff C_{t} & =Y_{t}+A_{t}-\left(\frac{A_{t+1}}{Z}\right)^{1/\alpha}.
+\end{align*}
+
+\end_inset
+
+We can rewrite the sequence problem as
+\begin_inset Formula 
+\[
+\max_{\{A_{t}\}_{t=1}^{\infty}}\mathbb{E}_{0}\sum_{t=0}^{\infty}\beta^{t}\frac{\left(Y_{t}+A_{t}-\left(\frac{A_{t+1}}{Z}\right)^{1/\alpha}\right)^{1-\gamma}}{1-\gamma}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Then take FOCs WRT 
+\begin_inset Formula $A_{t+1}$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+0 & =\frac{\partial\mathcal{L}}{\partial A_{t+1}}\\
+ & =\mathbb{E}_{0}\left[\beta^{t}\left(Y_{t}+A_{t}-\left(\frac{A_{t+1}}{Z}\right)^{1/\alpha}\right)^{-\gamma}\left(-\frac{1}{\alpha}\right)\left(\frac{A_{t+1}}{Z}\right)^{\frac{1}{\alpha}-1}\left(\frac{1}{Z}\right)+\beta^{t+1}\left(Y_{t+1}+A_{t+1}-\left(\frac{A_{t+2}}{Z}\right)^{1/\alpha}\right)^{-\gamma}\right].
+\end{align*}
+
+\end_inset
+
+And note that at the steady-state, 
+\begin_inset Formula $\overline{A}\equiv A_{t}$
+\end_inset
+
+ and 
+\begin_inset Formula $\overline{Y}\equiv Y_{t}$
+\end_inset
+
+ for all 
+\begin_inset Formula $t$
+\end_inset
+
+, so then
+\begin_inset Formula 
+\begin{align*}
+\mathbb{E}_{0}\left[\beta^{t}\left(\overline{Y}+\overline{A}-\left(\frac{\overline{A}}{Z}\right)^{1/\alpha}\right)^{-\gamma}\left(\frac{1}{\alpha}\right)\left(\frac{\overline{A}}{Z}\right)^{\frac{1}{\alpha}-1}\left(\frac{1}{Z}\right)\right] & =\mathbb{E}_{0}\left[\beta^{t+1}\left(\overline{Y}+\overline{A}-\left(\frac{\overline{A}}{Z}\right)^{1/\alpha}\right)^{-\gamma}\right]\\
+\iff\left(\frac{1}{\alpha}\right)\left(\frac{\overline{A}}{Z}\right)^{\frac{1}{\alpha}-1}\left(\frac{1}{Z}\right) & =\beta\\
+\iff\left(\frac{\overline{A}}{Z}\right)^{\frac{1-\alpha}{\alpha}} & =\alpha\beta Z\\
+\iff\overline{A} & =\left(\alpha\beta\right)^{\frac{\alpha}{1-\alpha}}Z^{\frac{1}{1-\alpha}}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

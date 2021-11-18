@@ -29,19 +29,19 @@ def tauchen(N,mu,rho,sigma,m):
 
     Z = np.zeros(N)
     Zprob = np.zeros((N,N))
-    a = (1-rho)*mu
+    a = (1.0-rho)*mu
 
-    Z[-1] = m * np.sqrt(sigma**2 / (1.0-rho**2))
+    Z[-1] = m * np.sqrt(np.power(sigma,2) / (1.0-np.power(rho,2)))
     Z[0] = -Z[-1]
     zstep = (Z[-1] - Z[0]) / (N-1)
 
-    for i in range(1,N-2):
+    for i in range(1,N-1):
         Z[i] = Z[0] + zstep * i
 
     Z = Z + a / (1.0-rho)
 
-    for j in range(0,N-1):
-        for k in range(0,N-1):
+    for j in range(0,N):
+        for k in range(0,N):
             if k==0:
                 Zprob[j,k] = norm.cdf((Z[0] - a - rho*Z[j] + zstep/2.0) / sigma)
             elif k==N-1:

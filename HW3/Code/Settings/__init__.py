@@ -9,3 +9,6 @@ from .directories import *
 from .poly import *
 from .f import *
 from .tauchen import *
+from .bellman import *
+from .maxbellman import *
+from .simulate import *

@@ -1,7 +1,7 @@
 from Settings import *
 
 
-def PolyBasis(X,Y):
+def PolyBasis(X,Y,scalar='no'):
     ''' 
     Polynomial basis functions, using 2nd order polynomial
 
@@ -13,12 +13,20 @@ def PolyBasis(X,Y):
     B   n x 6 array of basis functions: 1, X, Y, X^2, X*Y, Y^2
     '''
 
-    if Y.isna().all():
+    #if Y.isna().all():
+    #    B = np.column_stack((np.ones(len(X)),
+    #                         X,
+    #                         np.power(X,2)))
+    #else:
+    if scalar=='no':
         B = np.column_stack((np.ones(len(X)),
-                             X,
-                             np.power(X,2)))
-    else:
-        B = np.column_stack((np.ones(len(X)),
+                            X,
+                            Y,
+                            np.power(X,2),
+                            np.multiply(X,Y),
+                            np.power(Y,2)))
+    if scalar=='yes':
+        B = np.column_stack((1,
                             X,
                             Y,
                             np.power(X,2),
@@ -44,13 +52,13 @@ def PolyGetCoef(X,Y,Z):
        
     B = PolyBasis(X=X,
                   Y=Y)
-    #BT = B.T
-    #b = ((np.linalg.inv((BT @ B)) @ BT) @ Z)
-    b = sm.OLS(endog=Z,
-               exog=B)\
-           .fit()\
-           .params\
-           .values
+    BT = B.T
+    b = ((np.linalg.inv((BT @ B)) @ BT) @ Z)
+    #b = sm.OLS(endog=Z,
+    #           exog=B)\
+    #       .fit()\
+    #       .params\
+    #       .values
 
     return(b)
 

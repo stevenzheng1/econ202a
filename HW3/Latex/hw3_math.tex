@@ -1,0 +1,70 @@
+%% LyX 2.3.6.2 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[english]{article}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{babel}
+\begin{document}
+
+\section*{Part a}
+
+We have the recursive problem
+\[
+V(A,Y)=\max\left\{ \frac{C^{1-\gamma}}{1-\gamma}+\beta\mathbb{E}[V(A^{\prime},Y^{\prime})]\right\} 
+\]
+subject to the budget constraint
+\[
+A_{t+1}=Z(Y_{t}-C_{t}+A_{t})^{\alpha}
+\]
+with labor income
+\[
+\log Y_{t}=(1-\rho)\log\mu+\rho\log Y_{t-1}+\epsilon_{t}.
+\]
+We can rearrange the budget constraint as
+\begin{align*}
+A_{t+1}^{1/\alpha} & =Z^{1/\alpha}(Y_{t}-C_{t}+A_{t})\\
+\iff\left(\frac{A_{t+1}}{Z}\right)^{1/\alpha} & =Y_{t}-C_{t}+A_{t}\\
+\iff C_{t} & =Y_{t}+A_{t}-\left(\frac{A_{t+1}}{Z}\right)^{1/\alpha}
+\end{align*}
+so we can rewrite the recursive problem as
+\[
+V(A,Y)=\max_{A^{\prime}\in\Gamma(A,Y)}\left\{ \frac{\left(Y+A-\left(\frac{A^{\prime}}{Z}\right)^{1/\alpha}\right)^{1-\gamma}}{1-\gamma}+\beta\mathbb{E}\left[V(A^{\prime},Y^{\prime})\right]\right\} .
+\]
+
+
+\section*{Part d}
+
+Let's calculate the steady-state of $A$ using the FOCs of the sequence
+problem and the budget constraint.
+
+The sequence problem is
+\[
+\max_{\{C_{t}\}_{t=0}^{\infty}}\mathbb{E}_{0}\sum_{t=0}^{\infty}\beta^{t}\frac{C_{t}^{1-\gamma}}{1-\gamma}
+\]
+such that
+\begin{align*}
+A_{t+1} & =Z(Y_{t}-C_{t}+A_{t})^{\alpha}\\
+\iff C_{t} & =Y_{t}+A_{t}-\left(\frac{A_{t+1}}{Z}\right)^{1/\alpha}.
+\end{align*}
+We can rewrite the sequence problem as
+\[
+\max_{\{A_{t}\}_{t=1}^{\infty}}\mathbb{E}_{0}\sum_{t=0}^{\infty}\beta^{t}\frac{\left(Y_{t}+A_{t}-\left(\frac{A_{t+1}}{Z}\right)^{1/\alpha}\right)^{1-\gamma}}{1-\gamma}.
+\]
+
+Then take FOCs WRT $A_{t+1}$
+\begin{align*}
+0 & =\frac{\partial\mathcal{L}}{\partial A_{t+1}}\\
+ & =\mathbb{E}_{0}\left[\beta^{t}\left(Y_{t}+A_{t}-\left(\frac{A_{t+1}}{Z}\right)^{1/\alpha}\right)^{-\gamma}\left(-\frac{1}{\alpha}\right)\left(\frac{A_{t+1}}{Z}\right)^{\frac{1}{\alpha}-1}\left(\frac{1}{Z}\right)+\beta^{t+1}\left(Y_{t+1}+A_{t+1}-\left(\frac{A_{t+2}}{Z}\right)^{1/\alpha}\right)^{-\gamma}\right].
+\end{align*}
+And note that at the steady-state, $\overline{X}\equiv X_{t}$ for
+all $t$, so then
+\begin{align*}
+\mathbb{E}_{0}\left[\beta^{t}\left(\overline{Y}+\overline{A}-\left(\frac{\overline{A}}{Z}\right)^{1/\alpha}\right)^{-\gamma}\left(\frac{1}{\alpha}\right)\left(\frac{\overline{A}}{Z}\right)^{\frac{1}{\alpha}-1}\left(\frac{1}{Z}\right)\right] & =\mathbb{E}_{0}\left[\beta^{t+1}\left(\overline{Y}+\overline{A}-\left(\frac{\overline{A}}{Z}\right)^{1/\alpha}\right)^{-\gamma}\right]\\
+\iff\left(\frac{1}{\alpha}\right)\left(\frac{\overline{A}}{Z}\right)^{\frac{1}{\alpha}-1}\left(\frac{1}{Z}\right) & =\beta\\
+\iff\left(\frac{\overline{A}}{Z}\right)^{\frac{1-\alpha}{\alpha}} & =\alpha\beta Z\\
+\iff\overline{A} & =\left(\alpha\beta\right)^{\frac{\alpha}{1-\alpha}}Z^{\frac{1}{1-\alpha}}.
+\end{align*}
+
+\end{document}
